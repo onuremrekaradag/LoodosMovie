@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.kefelon.loodosmovie.data.model.MovieModel" />
+
+        <variable
+            name="listener"
+            type="com.kefelon.loodosmovie.ui.moviesearch.SearchNavigator" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+    </data>
+
+    <LinearLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/recycler_item_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="6dp"
+            android:onClick="@{()->listener.goDetail(model,position)}"
+            card_view:cardBackgroundColor="@color/colorWhite"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="4dp"
+            card_view:cardPreventCornerOverlap="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:background="@color/colorLoodos"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:downloadUrl="@{model.poster}"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|top"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{model.title}"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@{model.year}"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/recycler_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="7dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorLoodos" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>

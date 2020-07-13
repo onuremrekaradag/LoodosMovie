@@ -1,0 +1,119 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlinx-serialization'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'com.google.gms.google-services'
+
+
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        applicationId "com.kefelon.loodosmovie"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            buildConfigField 'boolean', 'IS_DEVELOPMENT', 'true'
+            buildConfigField 'String', 'API_URL', '"https://www.omdbapi.com/"'
+            buildConfigField 'String', 'apiEndpointUrl', '"https://img.omdbapi.com/"'
+            buildConfigField 'String', 'API_KEY', '"beee8708"'
+
+        }
+
+        release {
+            minifyEnabled false
+            buildConfigField 'boolean', 'IS_DEVELOPMENT', 'false'
+            buildConfigField 'String', 'API_URL', '"https://www.omdbapi.com/"'
+            buildConfigField 'String', 'POSTER_API_URL', '"https://img.omdbapi.com/"'
+            buildConfigField 'String', 'API_KEY', '"beee8708"'
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def versionName = variant.versionName
+            def versionCode = variant.versionCode
+            def variantName = variant.name
+
+            outputFileName = variantName + '_' + versionName + '_' + versionCode + '.apk'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation rootProject.ext.dependencies["appCompat"]
+    implementation rootProject.ext.dependencies["recyclerView"]
+    implementation rootProject.ext.dependencies["constaraintLayout"]
+    implementation rootProject.ext.dependencies["cardView"]
+    implementation rootProject.ext.dependencies["kotlin"]
+    implementation rootProject.ext.dependencies["kotlin_ktx"]
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["firebaseAnalytics"]
+    implementation rootProject.ext.dependencies["firebaseCrash"]
+    implementation rootProject.ext.dependencies["firebaseCore"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["retrofitGson"]
+    implementation rootProject.ext.dependencies["okhttp3"]
+    implementation rootProject.ext.dependencies["okhttp3Interceptor"]
+    implementation rootProject.ext.dependencies["dagger2"]
+    implementation rootProject.ext.dependencies["roomRuntime"]
+    implementation rootProject.ext.dependencies["roomCompiler"]
+    implementation rootProject.ext.dependencies["lifeCycleRuntime"]
+    implementation rootProject.ext.dependencies["lifeCycleRuntimeExtensions"]
+    implementation rootProject.ext.dependencies["lifeCycleCompiler"]
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glideAnnotationProcessor"]
+    implementation 'com.google.dagger:dagger-android-support:2.27'
+    kapt 'com.google.dagger:dagger-android-processor:2.27'
+    kapt 'com.google.dagger:dagger-compiler:2.27'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.8.1"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.0"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.0"
+    implementation "com.google.dagger:dagger:2.27"
+    implementation "com.google.dagger:dagger-android-support:2.27"
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.27'
+    //Firebase
+    implementation 'com.google.firebase:firebase-config-ktx:19.2.0'
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
+
+
+
+
+
+
+
+    testImplementation rootProject.ext.dependencies["junitTest"]
+    androidTestImplementation rootProject.ext.dependencies["junitAndroidTestImplementation"]
+    testImplementation rootProject.ext.dependencies["mockitoTestImplementation"]
+    androidTestImplementation rootProject.ext.dependencies["mockitoAndroidTestImplementation"]
+}

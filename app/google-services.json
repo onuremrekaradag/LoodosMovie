@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "902708889997",
+    "firebase_url": "https://loodosmovie-676f2.firebaseio.com",
+    "project_id": "loodosmovie-676f2",
+    "storage_bucket": "loodosmovie-676f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902708889997:android:572852f426bb682ae4d5c4",
+        "android_client_info": {
+          "package_name": "com.kefelon.loodosmovie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902708889997-cr18a8m3khsi4geujofmhh6apecv2nki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsVwNB3p10habOUckJ8FoYcZ3Teq7CmeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902708889997-cr18a8m3khsi4geujofmhh6apecv2nki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

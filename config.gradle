@@ -1,0 +1,73 @@
+ext {
+
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.3",
+            minSdkVersion    : 23,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    version = [
+            appCompatVersion                       : '1.1.0',
+            recyclerViewVersion                    : '1.1.0',
+            cardViewVersion                        : '1.0.0',
+            constaraintLayoutVersion               : '1.1.3',
+            multidexVersion                        : '2.0.1',
+            firebaseAnalyticsVersion               : '17.4.1',
+            firebaseCrashVersion                   : '16.2.1',
+            firebaseCoreVersion                    : '17.4.1',
+            glideVersion                           : '4.11.0',
+            glideAnnotationProcessorVersion        : '4.11.0',
+            retrofitVersion                        : '2.8.1',
+            retrofitGsonVersion                    : '2.8.1',
+            okhttp3Version                         : '4.6.0',
+            okhttp3InterceptorVersion              : '4.6.0',
+            kotlinVersion                          : '1.3.72',
+            kotlinKtxVersion                       : '1.3.0',
+            junitTestVersion                       : '4.13',
+            junitAndroidTestImplementationVersion  : '1.1.1',
+            mockitoTestImplementationVersion       : '3.3.3',
+            mockitoAndroidTestImplementationVersion: '3.3.3',
+            dagger2Version                         : '2.27',
+            daggerCompilerVersion                  : '2.27',
+            daggerAndroidProcessorVersion          : '2.27',
+            lifeCycleVersion                       : '2.0.0',
+            roomVersion                            : '2.1.0'
+    ]
+
+    dependencies = [
+            "appCompat"                       : "androidx.appcompat:appcompat:${version["appCompatVersion"]}",
+            "recyclerView"                    : "androidx.recyclerview:recyclerview:${version["recyclerViewVersion"]}",
+            "constaraintLayout"               : "androidx.constraintlayout:constraintlayout:${version["constaraintLayoutVersion"]}",
+            "cardView"                        : "androidx.cardview:cardview:${version["cardViewVersion"]}",
+            "multidex"                        : "androidx.multidex:multidex:${version["multidexVersion"]}",
+            "firebaseAnalytics"               : "com.google.firebase:firebase-analytics:${version["firebaseAnalyticsVersion"]}",
+            "firebaseCrash"                   : "com.google.firebase:firebase-crash:${version["firebaseCrashVersion"]}",
+            "firebaseCore"                    : "com.google.firebase:firebase-core:${version["firebaseCoreVersion"]}",
+            "glide"                           : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+            "glideAnnotationProcessor"        : "com.github.bumptech.glide:compiler:${version["glideAnnotationProcessorVersion"]}",
+            "retrofit"                        : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
+            "retrofitGson"                    : "com.squareup.retrofit2:converter-gson:${version["retrofitGsonVersion"]}",
+            "okhttp3"                         : "com.squareup.okhttp3:okhttp:${version["okhttp3Version"]}",
+            "okhttp3Interceptor"              : "com.squareup.okhttp3:logging-interceptor:${version["okhttp3InterceptorVersion"]}",
+            "kotlin"                          : "org.jetbrains.kotlin:kotlin-stdlib:${version["kotlinVersion"]}",
+            "kotlin_ktx"                      : "androidx.core:core-ktx:${version["kotlinKtxVersion"]}",
+            "junitTest"                       : "junit:junit:${version["junitTestVersion"]}",
+            "junitAndroidTestImplementation"  : "androidx.test.ext:junit:${version["junitAndroidTestImplementationVersion"]}",
+            "mockitoTestImplementation"       : "org.mockito:mockito-core:${version["mockitoTestImplementationVersion"]}",
+            "mockitoAndroidTestImplementation": "org.mockito:mockito-android:${version["mockitoAndroidTestImplementationVersion"]}",
+            "dagger2"                         : "com.google.dagger:dagger:${version["dagger2Version"]}",
+            "daggerCompiler"                  : "com.google.dagger:dagger-compiler:${version["daggerCompilerVersion"]}",
+            "daggerAndroidProcessor"          : "com.google.dagger:dagger-android-processor:${version["daggerAndroidProcessorVersion"]}",
+            "roomRuntime"                     : "androidx.room:room-runtime:${version["roomVersion"]}",
+            "roomCompiler"                    : "androidx.room:room-compiler:${version["roomVersion"]}",
+            "lifeCycleRuntime"                : "androidx.lifecycle:lifecycle-runtime:${version["lifeCycleVersion"]}",
+            "lifeCycleRuntimeExtensions"      : "androidx.lifecycle:lifecycle-extensions:${version["lifeCycleVersion"]}",
+            "lifeCycleCompiler"               : "androidx.lifecycle:lifecycle-compiler:${version["lifeCycleVersion"]}",
+
+    ]
+
+
+}
