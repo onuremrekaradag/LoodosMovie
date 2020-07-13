@@ -40,6 +40,7 @@ class SplashScreenActivity : BaseActivity() {
             Handler().postDelayed({
                 val intent = Intent(this@SplashScreenActivity, MainActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 startActivity(intent)
             }, 3000)
         }
