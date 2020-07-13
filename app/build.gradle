@@ -90,27 +90,16 @@ dependencies {
     implementation rootProject.ext.dependencies["lifeCycleRuntimeExtensions"]
     implementation rootProject.ext.dependencies["lifeCycleCompiler"]
     implementation rootProject.ext.dependencies["glide"]
+    implementation rootProject.ext.dependencies["daggerSupport"]
+    implementation rootProject.ext.dependencies["rxJava2"]
+    implementation rootProject.ext.dependencies["rxAndroid"]
+    implementation rootProject.ext.dependencies["retrofitRxJavaAdapter"]
+    implementation rootProject.ext.dependencies["navigationFragment"]
+    implementation rootProject.ext.dependencies["navigationKtx"]
+    implementation rootProject.ext.dependencies["firebaseConfig"]
+    kapt rootProject.ext.dependencies["daggerAndroidProcessor"]
+    kapt rootProject.ext.dependencies["daggerCompiler"]
     annotationProcessor rootProject.ext.dependencies["glideAnnotationProcessor"]
-    implementation 'com.google.dagger:dagger-android-support:2.27'
-    kapt 'com.google.dagger:dagger-android-processor:2.27'
-    kapt 'com.google.dagger:dagger-compiler:2.27'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-    implementation "com.squareup.retrofit2:adapter-rxjava2:2.8.1"
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.0"
-    implementation "androidx.navigation:navigation-ui-ktx:2.3.0"
-    implementation "com.google.dagger:dagger:2.27"
-    implementation "com.google.dagger:dagger-android-support:2.27"
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.27'
-    //Firebase
-    implementation 'com.google.firebase:firebase-config-ktx:19.2.0'
-    implementation 'com.google.firebase:firebase-analytics:17.4.4'
-
-
-
-
-
-
 
     testImplementation rootProject.ext.dependencies["junitTest"]
     androidTestImplementation rootProject.ext.dependencies["junitAndroidTestImplementation"]

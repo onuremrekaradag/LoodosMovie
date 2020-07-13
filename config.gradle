@@ -34,7 +34,14 @@ ext {
             daggerCompilerVersion                  : '2.27',
             daggerAndroidProcessorVersion          : '2.27',
             lifeCycleVersion                       : '2.0.0',
-            roomVersion                            : '2.1.0'
+            roomVersion                            : '2.1.0',
+            daggerSupportVersion                   : '2.27',
+            rxJava2Version                         : '2.2.19',
+            rxAndroidVersion                       : '2.1.1',
+            retrofitRxJavaAdapterVersion           : '2.8.1',
+            navigationFragmentVersion              : '2.3.0',
+            navigationKtxVersion                   : '2.3.0',
+            firebaseConfigVersion                  : '19.2.0'
     ]
 
     dependencies = [
@@ -66,6 +73,13 @@ ext {
             "lifeCycleRuntime"                : "androidx.lifecycle:lifecycle-runtime:${version["lifeCycleVersion"]}",
             "lifeCycleRuntimeExtensions"      : "androidx.lifecycle:lifecycle-extensions:${version["lifeCycleVersion"]}",
             "lifeCycleCompiler"               : "androidx.lifecycle:lifecycle-compiler:${version["lifeCycleVersion"]}",
+            "daggerSupport"                  : "com.google.dagger:dagger-android-support:${version["daggerSupportVersion"]}",
+            "rxJava2"                        : "io.reactivex.rxjava2:rxjava:${version["rxJava2Version"]}",
+            "rxAndroid"                      : "io.reactivex.rxjava2:rxandroid:${version["rxAndroidVersion"]}",
+            "retrofitRxJavaAdapter"          : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitRxJavaAdapterVersion"]}",
+            "navigationFragment"             : "androidx.navigation:navigation-fragment-ktx:${version["navigationFragmentVersion"]}",
+            "navigationKtx"                  : "androidx.navigation:navigation-fragment-ktx:${version["navigationKtxVersion"]}",
+            "firebaseConfig"                 : "com.google.firebase:firebase-config-ktx:${version["firebaseConfigVersion"]}"
 
     ]
 
