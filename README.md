@@ -1,4 +1,4 @@
-# LoodosMovie
+# Movie
 Movie by Kefelon (Onur Emre KARADAG)
 
 The main purpose of this app is making MVVM sample implementation using the new Google Architectural components LiveData and ViewModel. 
