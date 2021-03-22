@@ -1,5 +1,5 @@
 # LoodosMovie
-LoodosMovie by Kefelon (Onur Emre KARADAG)
+Movie by Kefelon (Onur Emre KARADAG)
 
 The main purpose of this app is making MVVM sample implementation using the new Google Architectural components LiveData and ViewModel. 
 Also this project contains Dagger2, RxJava, Retrofit, Glide, Databinding, Firebase Remote Config and Navigation.
